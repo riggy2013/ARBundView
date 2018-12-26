@@ -9,44 +9,24 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate {
+class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
 
     @IBOutlet var webView: WKWebView!
     
     var build: Building?
 
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        let contentController = WKUserContentController()
-        
-        if let JSPath = Bundle.main.path(forResource: "hideWikiHeader", ofType: "js") {
-            do {
-                let JSString = try String(contentsOfFile: JSPath)
-                let JSScript = WKUserScript(source: JSString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-                contentController.addUserScript(JSScript)
-            } catch {
-                fatalError("Error while processing JS file: \(error)")
-            }
-        } else {
-            fatalError("Unable to read resource file: hideWikiHeader.js")
-        }
-        
-        webConfiguration.userContentController = contentController
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
-    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
         
         let myURL = build!.url
         let myRequest = URLRequest(url: myURL)
         webView.load(myRequest)
         
-        // Do any additional setup after loading the view.
-        
-        
+        // Do any additional setup after loading th
     }
     
     
@@ -58,8 +38,20 @@ class WebViewController: UIViewController, WKUIDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+
     */
-    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if let JSPath = Bundle.main.path(forResource: "hideWikiHeader", ofType: "js") {
+            do {
+                let JSString = try String(contentsOfFile: JSPath)
+                webView.evaluateJavaScript(JSString, completionHandler: nil)
+            } catch {
+                fatalError("Error while processing JS file: \(error)")
+            }
+        } else {
+            fatalError("Unable to read resource file: hideWikiHeader.js")
+        }
+    }
     // MARK: Private function
 
 }
