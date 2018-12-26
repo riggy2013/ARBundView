@@ -11,20 +11,45 @@ import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate {
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet var webView: WKWebView!
     
     var build: Building?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        let contentController = WKUserContentController()
+        
+        if let JSPath = Bundle.main.path(forResource: "hideWikiHeader", ofType: "js") {
+            do {
+                let JSString = try String(contentsOfFile: JSPath)
+                let JSScript = WKUserScript(source: JSString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+                contentController.addUserScript(JSScript)
+            } catch {
+                fatalError("Error while processing JS file: \(error)")
+            }
+        } else {
+            fatalError("Unable to read resource file: hideWikiHeader.js")
+        }
+        
+        webConfiguration.userContentController = contentController
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
         let myURL = build!.url
         let myRequest = URLRequest(url: myURL)
         webView.load(myRequest)
+        
         // Do any additional setup after loading the view.
+        
+        
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -34,5 +59,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: Private function
 
 }

@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		78122E4321D2224600F7AA31 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E4221D2224600F7AA31 /* TableViewCell.swift */; };
 		78122E4721D22FED00F7AA31 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E4621D22FED00F7AA31 /* WebViewController.swift */; };
+		78122E4D21D329C400F7AA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78122E4A21D329C300F7AA31 /* Assets.xcassets */; };
+		78122E4E21D329C400F7AA31 /* hideWikiHeader.js in Resources */ = {isa = PBXBuildFile; fileRef = 78122E4B21D329C400F7AA31 /* hideWikiHeader.js */; };
+		78122E4F21D329C400F7AA31 /* BuildingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78122E4C21D329C400F7AA31 /* BuildingList.plist */; };
 		785AA7E121CB8E490091F8E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E021CB8E490091F8E7 /* AppDelegate.swift */; };
 		785AA7E321CB8E490091F8E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E221CB8E490091F8E7 /* TableViewController.swift */; };
 		785AA7E621CB8E490091F8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785AA7E421CB8E490091F8E7 /* Main.storyboard */; };
-		785AA7E821CB8E4A0091F8E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785AA7E721CB8E4A0091F8E7 /* Assets.xcassets */; };
 		785AA7EB21CB8E4A0091F8E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785AA7E921CB8E4A0091F8E7 /* LaunchScreen.storyboard */; };
 		785AA7F621CB8E4B0091F8E7 /* ARBundViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7F521CB8E4B0091F8E7 /* ARBundViewTests.swift */; };
 		785AA80121CB91F90091F8E7 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA80021CB91F90091F8E7 /* Building.swift */; };
-		785AA80321CB92040091F8E7 /* BuildingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785AA80221CB92040091F8E7 /* BuildingList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,18 +33,19 @@
 /* Begin PBXFileReference section */
 		78122E4221D2224600F7AA31 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		78122E4621D22FED00F7AA31 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		78122E4A21D329C300F7AA31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78122E4B21D329C400F7AA31 /* hideWikiHeader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hideWikiHeader.js; sourceTree = "<group>"; };
+		78122E4C21D329C400F7AA31 /* BuildingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingList.plist; sourceTree = "<group>"; };
 		785AA7DD21CB8E490091F8E7 /* ARBundView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBundView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785AA7E021CB8E490091F8E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785AA7E221CB8E490091F8E7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		785AA7E521CB8E490091F8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		785AA7E721CB8E4A0091F8E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785AA7EA21CB8E4A0091F8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		785AA7EC21CB8E4A0091F8E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785AA7F121CB8E4B0091F8E7 /* ARBundViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARBundViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785AA7F521CB8E4B0091F8E7 /* ARBundViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBundViewTests.swift; sourceTree = "<group>"; };
 		785AA7F721CB8E4B0091F8E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785AA80021CB91F90091F8E7 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
-		785AA80221CB92040091F8E7 /* BuildingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +89,13 @@
 			children = (
 				785AA7E021CB8E490091F8E7 /* AppDelegate.swift */,
 				78122E4221D2224600F7AA31 /* TableViewCell.swift */,
-				785AA80221CB92040091F8E7 /* BuildingList.plist */,
 				785AA7E221CB8E490091F8E7 /* TableViewController.swift */,
 				78122E4621D22FED00F7AA31 /* WebViewController.swift */,
+				78122E4A21D329C300F7AA31 /* Assets.xcassets */,
+				78122E4C21D329C400F7AA31 /* BuildingList.plist */,
+				78122E4B21D329C400F7AA31 /* hideWikiHeader.js */,
 				785AA7E421CB8E490091F8E7 /* Main.storyboard */,
 				785AA80021CB91F90091F8E7 /* Building.swift */,
-				785AA7E721CB8E4A0091F8E7 /* Assets.xcassets */,
 				785AA7E921CB8E4A0091F8E7 /* LaunchScreen.storyboard */,
 				785AA7EC21CB8E4A0091F8E7 /* Info.plist */,
 			);
@@ -190,9 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				785AA7EB21CB8E4A0091F8E7 /* LaunchScreen.storyboard in Resources */,
-				785AA7E821CB8E4A0091F8E7 /* Assets.xcassets in Resources */,
-				785AA80321CB92040091F8E7 /* BuildingList.plist in Resources */,
+				78122E4D21D329C400F7AA31 /* Assets.xcassets in Resources */,
 				785AA7E621CB8E490091F8E7 /* Main.storyboard in Resources */,
+				78122E4E21D329C400F7AA31 /* hideWikiHeader.js in Resources */,
+				78122E4F21D329C400F7AA31 /* BuildingList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
