@@ -57,6 +57,8 @@ class TableViewController: UITableViewController {
         
         // Pass the selected object to the new view controller.
         switch(segue.identifier ?? "") {
+        case "ShowMap":
+            break
         case "ShowDetail":
             guard let ShowWebViewController = segue.destination as? WebViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
