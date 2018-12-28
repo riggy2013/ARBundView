@@ -32,7 +32,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Building Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K9-FK-bOH">
                                             <rect key="frame" x="98" y="35" width="261" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="The Building List" id="MOz-JE-CYB" userLabel="The Builidng List">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="RJE-1R-OQJ">
+                        <barButtonItem key="leftBarButtonItem" id="RJE-1R-OQJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bAT-dT-TRb" userLabel="Map">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,7 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="7z6-0A-Lki"/>
                     </view>
                     <navigationItem key="navigationItem" title="The Map" id="nvV-oa-nYq">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Eza-B2-BOk">
+                        <barButtonItem key="leftBarButtonItem" id="Eza-B2-BOk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="txQ-9X-6SI">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -93,7 +93,7 @@ class TableViewController: UITableViewController {
                     guard let Sbuild = Building(name: name1, photo: photo1, url: URL(string: URLstring)!) else {
                         fatalError("Unable to instantiate building. \(name1 as String?)")
                     }
-                    Sbuild.searchAddress = build1["SearchAddress"] as! String
+                    Sbuild.searchAddress = build1["SearchAddress"] as? String
                     Sbuild.coordinate?.latitude = build1["Latitude"] as! Double
                     Sbuild.coordinate?.longitude = build1["Longitude"] as! Double
                     
