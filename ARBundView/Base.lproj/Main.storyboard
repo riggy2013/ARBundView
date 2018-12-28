@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Building Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K9-FK-bOH">
-                                            <rect key="frame" x="98" y="35" width="261" height="21"/>
+                                            <rect key="frame" x="98" y="34" width="261" height="21"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -42,7 +42,7 @@
                                 <connections>
                                     <outlet property="BuildingIcon" destination="LxT-QG-yWW" id="Y19-86-UJS"/>
                                     <outlet property="BuildingName" destination="6K9-FK-bOH" id="w7I-nD-6PM"/>
-                                    <segue destination="hT5-R6-hXN" kind="show" identifier="ShowDetail" id="M4d-av-yGy"/>
+                                    <segue destination="hT5-R6-hXN" kind="show" identifier="listShowDetail" id="M4d-av-yGy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,7 +61,7 @@
                                 </accessibility>
                                 <state key="normal" title="Map"/>
                                 <connections>
-                                    <segue destination="KSK-7Z-KxI" kind="presentation" identifier="ShowMap" id="d8z-b1-7Eq"/>
+                                    <segue destination="KSK-7Z-KxI" kind="presentation" identifier="listShowMap" id="d8z-b1-7Eq"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -94,18 +94,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="List"/>
                                 <connections>
-                                    <segue destination="dDp-zY-oCv" kind="presentation" id="OX1-Rt-2jE"/>
+                                    <segue destination="dDp-zY-oCv" kind="presentation" identifier="mapShowList" id="OX1-Rt-2jE"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="LLQ-t0-mEG" id="rSz-qV-gvx"/>
+                        <segue destination="hT5-R6-hXN" kind="show" identifier="mapShowDetail" id="Zgc-gh-MFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4A-4u-yzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461.60000000000002" y="609.44527736131943"/>
+            <point key="canvasLocation" x="473" y="655"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="YdU-gy-6zr">
@@ -177,4 +178,7 @@
     <resources>
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zgc-gh-MFI"/>
+    </inferredMetricsTieBreakers>
 </document>

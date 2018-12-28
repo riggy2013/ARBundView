@@ -17,21 +17,69 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapView.delegate = self
         // Do any additional setup after loading the view.
         initMapView()
         loadBuildingAnnotations()
     }
     
-
-    /*
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKind(of: MKPointAnnotation.self) {
+            
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pointReuseIndentifier") as? MKMarkerAnnotationView
+            if annotationView == nil {
+                annotationView = MKMarkerAnnotationView.init(annotation: annotation, reuseIdentifier: "pointReuseIndentifier")
+            }
+            
+            annotationView!.canShowCallout = true
+//            annotationView!.animatesDrop = true
+//            annotationView?.isDraggable = true
+            
+            let button = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = button
+            
+            return annotationView
+        }
+        return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "mapShowDetail", sender: view)
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        // Pass the selected object to the new view controller.
+        switch(segue.identifier ?? "") {
+        case "mapShowDetail":
+            guard let webViewController = segue.destination as? WebViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedAnnotation = sender as? MKAnnotationView else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            for build in builds {
+                if build.name == selectedAnnotation.annotation?.title {
+                    webViewController.build = build
+                    break
+                }
+            }
+        case "mapShowList":
+            break
+        case "mapShowAR":
+            break
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
     }
-    */
     
     func initMapView() {
         // set initial location in the Bund Shanghai.
@@ -48,7 +96,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = build.coordinate!
                 annotation.title = build.name
-                annotation.subtitle = build.searchAddress
                 self.mapView.addAnnotation(annotation)
                 
 //                showAnnotation(build: build)
