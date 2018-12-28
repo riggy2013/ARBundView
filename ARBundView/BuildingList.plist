@@ -10,7 +10,11 @@
 		<key>URL</key>
 		<string>Asia_Building</string>
 		<key>SearchAddress</key>
-		<string>上海亚细亚大楼</string>
+		<string>中山东一路1号</string>
+		<key>Latitude</key>
+		<real>31.233497</real>
+		<key>Longitude</key>
+		<real>121.491408</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -21,6 +25,10 @@
 		<string>Shanghai_Club_Building</string>
 		<key>SearchAddress</key>
 		<string>上海总会</string>
+		<key>Latitude</key>
+		<real>31.233786</real>
+		<key>Longitude</key>
+		<real>121.490957</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -30,7 +38,11 @@
 		<key>URL</key>
 		<string>Union_Building,_Shanghai</string>
 		<key>SearchAddress</key>
-		<string>外滩3号</string>
+		<string>中山东一路3号</string>
+		<key>Latitude</key>
+		<real>31.234126</real>
+		<key>Longitude</key>
+		<real>121.490799</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -40,7 +52,11 @@
 		<key>URL</key>
 		<string>Nissin_Building</string>
 		<key>SearchAddress</key>
-		<string>外滩5号</string>
+		<string>日清大楼</string>
+		<key>Latitude</key>
+		<real>31.234472</real>
+		<key>Longitude</key>
+		<real>121.490816</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -50,7 +66,11 @@
 		<key>URL</key>
 		<string>China_Merchants_Bank_Building</string>
 		<key>SearchAddress</key>
-		<string>中山东一路6号</string>
+		<string>外滩6号</string>
+		<key>Latitude</key>
+		<real>31.234733</real>
+		<key>Longitude</key>
+		<real>121.490539</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -61,6 +81,10 @@
 		<string>Great_Northern_Telegraph_Building</string>
 		<key>SearchAddress</key>
 		<string>中山东一路7号</string>
+		<key>Latitude</key>
+		<real>31.235088</real>
+		<key>Longitude</key>
+		<real>121.490421</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -70,7 +94,11 @@
 		<key>URL</key>
 		<string>HSBC_Building,_the_Bund</string>
 		<key>SearchAddress</key>
-		<string>中山东一路浦东发展银行</string>
+		<string>上海中山东一路12号</string>
+		<key>Latitude</key>
+		<real>31.236047</real>
+		<key>Longitude</key>
+		<real>121.489886</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -80,7 +108,11 @@
 		<key>URL</key>
 		<string>Customs_House,_Shanghai</string>
 		<key>SearchAddress</key>
-		<string>中山东一路13号</string>
+		<string>上海中山东一路13号</string>
+		<key>Latitude</key>
+		<real>31.236688</real>
+		<key>Longitude</key>
+		<real>121.489934</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -90,7 +122,11 @@
 		<key>URL</key>
 		<string>Bank_of_Communications_Building</string>
 		<key>SearchAddress</key>
-		<string>上海总工会</string>
+		<string>中山东一路14号</string>
+		<key>Latitude</key>
+		<real>31.23714</real>
+		<key>Longitude</key>
+		<real>121.489988</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -100,7 +136,11 @@
 		<key>URL</key>
 		<string>Russo-Chinese_Bank_Building</string>
 		<key>SearchAddress</key>
-		<string>上海外汇交易中心</string>
+		<string>中山东一路15号</string>
+		<key>Latitude</key>
+		<real>31.237664</real>
+		<key>Longitude</key>
+		<real>121.489896</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -110,7 +150,11 @@
 		<key>URL</key>
 		<string>Bank_of_Taiwan_Building</string>
 		<key>SearchAddress</key>
-		<string>招商银行外滩支行</string>
+		<string>中山东一路16号</string>
+		<key>Latitude</key>
+		<real>31.237971</real>
+		<key>Longitude</key>
+		<real>121.489722</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -120,7 +164,11 @@
 		<key>URL</key>
 		<string>North_China_Daily_News_Building</string>
 		<key>SearchAddress</key>
-		<string>外滩友邦大厦</string>
+		<string>中山东一路17号</string>
+		<key>Latitude</key>
+		<real>31.238166</real>
+		<key>Longitude</key>
+		<real>121.489713</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -130,7 +178,11 @@
 		<key>URL</key>
 		<string>Peace_Hotel</string>
 		<key>SearchAddress</key>
-		<string>斯沃琪和平饭店艺术中心</string>
+		<string>中山东一路20号</string>
+		<key>Latitude</key>
+		<real>31.239151</real>
+		<key>Longitude</key>
+		<real>121.489719</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -140,7 +192,11 @@
 		<key>URL</key>
 		<string>Bank_of_China_Building,_Shanghai</string>
 		<key>SearchAddress</key>
-		<string>中山东一路23号</string>
+		<string>中国银行上海市分行</string>
+		<key>Latitude</key>
+		<real>31.239521</real>
+		<key>Longitude</key>
+		<real>121.489781</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -151,6 +207,10 @@
 		<string>Yokohama_Specie_Bank_Building</string>
 		<key>SearchAddress</key>
 		<string>中山东一路24号</string>
+		<key>Latitude</key>
+		<real>31.23985</real>
+		<key>Longitude</key>
+		<real>121.48972</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -160,7 +220,11 @@
 		<key>URL</key>
 		<string>Yangtze_Insurance_Building</string>
 		<key>SearchAddress</key>
-		<string>中国农业银行外滩支行</string>
+		<string>中山东一路26号</string>
+		<key>Latitude</key>
+		<real>31.240053</real>
+		<key>Longitude</key>
+		<real>121.489812</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -171,6 +235,10 @@
 		<string>Jardine_Matheson_Building</string>
 		<key>SearchAddress</key>
 		<string>中山东一路27号</string>
+		<key>Latitude</key>
+		<real>31.240421</real>
+		<key>Longitude</key>
+		<real>121.489898</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -180,7 +248,11 @@
 		<key>URL</key>
 		<string>Former_Consulate-General_of_the_United_Kingdom,_Shanghai</string>
 		<key>SearchAddress</key>
-		<string>半岛酒店</string>
+		<string>中山东一路32号</string>
+		<key>Latitude</key>
+		<real>31.241319</real>
+		<key>Longitude</key>
+		<real>121.48911</real>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -191,6 +263,10 @@
 		<string>Gutzlaff_Signal_Tower</string>
 		<key>SearchAddress</key>
 		<string>外滩天文台</string>
+		<key>Latitude</key>
+		<real>31.233133</real>
+		<key>Longitude</key>
+		<real>121.492273</real>
 	</dict>
 </array>
 </plist>

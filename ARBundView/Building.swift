@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Building {
     
@@ -16,6 +17,7 @@ class Building {
     var photo: UIImage?
     var url: URL
     var searchAddress: String?
+    var coordinate: CLLocationCoordinate2D?
     
     //MARK: Initialization
     init?(name: String, photo: UIImage?, url: URL) {
@@ -29,6 +31,8 @@ class Building {
         self.name = name
         self.photo = photo
         self.url = url
+        
+        self.coordinate = CLLocationCoordinate2D()
         
     }
 }

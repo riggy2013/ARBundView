@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 var builds = [Building]()
 
@@ -83,16 +84,18 @@ class TableViewController: UITableViewController {
         if let fileUrl = Bundle.main.url(forResource: "BuildingList", withExtension: "plist") {
             do {
                 let data = try Data(contentsOf: fileUrl)
-                let buildPList = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as![[String: String]]
+                let buildPList = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as![[String: Any]]
                 
                 for build1 in buildPList {
-                    let name1 = build1["Name"]
-                    let photo1 = UIImage(named: build1["Photo"]!)
-                    let URLstring = "https://en.m.wikipedia.org/wiki/" + build1["URL"]!
-                    guard let Sbuild = Building(name: name1!, photo: photo1, url: URL(string: URLstring)!) else {
+                    let name1 = build1["Name"] as! String
+                    let photo1 = UIImage(named: build1["Photo"] as! String)
+                    let URLstring = "https://en.m.wikipedia.org/wiki/" + (build1["URL"] as! String)
+                    guard let Sbuild = Building(name: name1, photo: photo1, url: URL(string: URLstring)!) else {
                         fatalError("Unable to instantiate building. \(name1 as String?)")
                     }
-                    Sbuild.searchAddress = (build1["SearchAddress"])
+                    Sbuild.searchAddress = build1["SearchAddress"] as! String
+                    Sbuild.coordinate?.latitude = build1["Latitude"] as! Double
+                    Sbuild.coordinate?.longitude = build1["Longitude"] as! Double
                     
                     builds += [Sbuild]
                 }
