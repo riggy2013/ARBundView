@@ -13,6 +13,17 @@
 		78122E4E21D329C400F7AA31 /* hideWikiHeader.js in Resources */ = {isa = PBXBuildFile; fileRef = 78122E4B21D329C400F7AA31 /* hideWikiHeader.js */; };
 		78122E4F21D329C400F7AA31 /* BuildingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78122E4C21D329C400F7AA31 /* BuildingList.plist */; };
 		78122E5321D3B7A200F7AA31 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E5221D3B7A200F7AA31 /* MapViewController.swift */; };
+		78122E9021DC96DC00F7AA31 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8621DC96DB00F7AA31 /* LocationManager.swift */; };
+		78122E9121DC96DC00F7AA31 /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8721DC96DB00F7AA31 /* SceneLocationEstimate.swift */; };
+		78122E9221DC96DC00F7AA31 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8821DC96DC00F7AA31 /* SCNVector3+Extensions.swift */; };
+		78122E9321DC96DC00F7AA31 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8921DC96DC00F7AA31 /* CLLocation+Extensions.swift */; };
+		78122E9421DC96DC00F7AA31 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8A21DC96DC00F7AA31 /* SceneLocationView.swift */; };
+		78122E9521DC96DC00F7AA31 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8B21DC96DC00F7AA31 /* CGPoint+Extensions.swift */; };
+		78122E9621DC96DC00F7AA31 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8C21DC96DC00F7AA31 /* FloatingPoint+Radians.swift */; };
+		78122E9721DC96DC00F7AA31 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8D21DC96DC00F7AA31 /* SCNNode+Extensions.swift */; };
+		78122E9821DC96DC00F7AA31 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8E21DC96DC00F7AA31 /* LocationNode.swift */; };
+		78122E9921DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8F21DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift */; };
+		78122E9B21DC972000F7AA31 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E9A21DC972000F7AA31 /* ARViewController.swift */; };
 		785AA7E121CB8E490091F8E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E021CB8E490091F8E7 /* AppDelegate.swift */; };
 		785AA7E321CB8E490091F8E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E221CB8E490091F8E7 /* TableViewController.swift */; };
 		785AA7E621CB8E490091F8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785AA7E421CB8E490091F8E7 /* Main.storyboard */; };
@@ -38,6 +49,17 @@
 		78122E4B21D329C400F7AA31 /* hideWikiHeader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hideWikiHeader.js; sourceTree = "<group>"; };
 		78122E4C21D329C400F7AA31 /* BuildingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingList.plist; sourceTree = "<group>"; };
 		78122E5221D3B7A200F7AA31 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		78122E8621DC96DB00F7AA31 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		78122E8721DC96DB00F7AA31 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		78122E8821DC96DC00F7AA31 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		78122E8921DC96DC00F7AA31 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		78122E8A21DC96DC00F7AA31 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		78122E8B21DC96DC00F7AA31 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		78122E8C21DC96DC00F7AA31 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		78122E8D21DC96DC00F7AA31 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		78122E8E21DC96DC00F7AA31 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		78122E8F21DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		78122E9A21DC972000F7AA31 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		785AA7DD21CB8E490091F8E7 /* ARBundView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBundView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785AA7E021CB8E490091F8E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785AA7E221CB8E490091F8E7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78122E8521DC96A500F7AA31 /* ARCL */ = {
+			isa = PBXGroup;
+			children = (
+				78122E8B21DC96DC00F7AA31 /* CGPoint+Extensions.swift */,
+				78122E8921DC96DC00F7AA31 /* CLLocation+Extensions.swift */,
+				78122E8C21DC96DC00F7AA31 /* FloatingPoint+Radians.swift */,
+				78122E8621DC96DB00F7AA31 /* LocationManager.swift */,
+				78122E8E21DC96DC00F7AA31 /* LocationNode.swift */,
+				78122E8721DC96DB00F7AA31 /* SceneLocationEstimate.swift */,
+				78122E8F21DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift */,
+				78122E8A21DC96DC00F7AA31 /* SceneLocationView.swift */,
+				78122E8D21DC96DC00F7AA31 /* SCNNode+Extensions.swift */,
+				78122E8821DC96DC00F7AA31 /* SCNVector3+Extensions.swift */,
+			);
+			path = ARCL;
+			sourceTree = "<group>";
+		};
 		785AA7D421CB8E490091F8E7 = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +128,13 @@
 		785AA7DF21CB8E490091F8E7 /* ARBundView */ = {
 			isa = PBXGroup;
 			children = (
+				78122E8521DC96A500F7AA31 /* ARCL */,
 				785AA7E021CB8E490091F8E7 /* AppDelegate.swift */,
 				78122E4221D2224600F7AA31 /* TableViewCell.swift */,
 				785AA7E221CB8E490091F8E7 /* TableViewController.swift */,
 				78122E5221D3B7A200F7AA31 /* MapViewController.swift */,
 				78122E4621D22FED00F7AA31 /* WebViewController.swift */,
+				78122E9A21DC972000F7AA31 /* ARViewController.swift */,
 				78122E4A21D329C300F7AA31 /* Assets.xcassets */,
 				78122E4C21D329C400F7AA31 /* BuildingList.plist */,
 				78122E4B21D329C400F7AA31 /* hideWikiHeader.js */,
@@ -217,12 +258,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78122E9421DC96DC00F7AA31 /* SceneLocationView.swift in Sources */,
 				785AA7E321CB8E490091F8E7 /* TableViewController.swift in Sources */,
+				78122E9321DC96DC00F7AA31 /* CLLocation+Extensions.swift in Sources */,
+				78122E9221DC96DC00F7AA31 /* SCNVector3+Extensions.swift in Sources */,
+				78122E9121DC96DC00F7AA31 /* SceneLocationEstimate.swift in Sources */,
 				78122E5321D3B7A200F7AA31 /* MapViewController.swift in Sources */,
 				78122E4321D2224600F7AA31 /* TableViewCell.swift in Sources */,
+				78122E9021DC96DC00F7AA31 /* LocationManager.swift in Sources */,
 				785AA80121CB91F90091F8E7 /* Building.swift in Sources */,
 				78122E4721D22FED00F7AA31 /* WebViewController.swift in Sources */,
+				78122E9521DC96DC00F7AA31 /* CGPoint+Extensions.swift in Sources */,
+				78122E9621DC96DC00F7AA31 /* FloatingPoint+Radians.swift in Sources */,
+				78122E9821DC96DC00F7AA31 /* LocationNode.swift in Sources */,
+				78122E9B21DC972000F7AA31 /* ARViewController.swift in Sources */,
+				78122E9721DC96DC00F7AA31 /* SCNNode+Extensions.swift in Sources */,
 				785AA7E121CB8E490091F8E7 /* AppDelegate.swift in Sources */,
+				78122E9921DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

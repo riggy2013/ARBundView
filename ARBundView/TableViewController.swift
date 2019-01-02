@@ -60,6 +60,8 @@ class TableViewController: UITableViewController {
         switch(segue.identifier ?? "") {
         case "listShowMap":
             break
+        case "listShowAR":
+            break
         case "listShowDetail":
             guard let ShowWebViewController = segue.destination as? WebViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
