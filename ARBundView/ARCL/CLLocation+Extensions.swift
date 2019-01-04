@@ -75,6 +75,14 @@ public extension CLLocation {
 
         return CLLocation(coordinate: coordinate, altitude: altitude, horizontalAccuracy: self.horizontalAccuracy, verticalAccuracy: self.verticalAccuracy, timestamp: self.timestamp)
     }
+    
+    public func toMarsGS() -> CLLocation {
+        let coordinate = CLLocationCoordinate2D(
+            latitude: self.coordinate.WorldGS2MarsGS().latitude,
+            longitude: self.coordinate.WorldGS2MarsGS().longitude)
+ 
+        return CLLocation(coordinate: coordinate, altitude: self.altitude, horizontalAccuracy: self.horizontalAccuracy, verticalAccuracy: self.verticalAccuracy, timestamp: self.timestamp)
+    }
 }
 
 public extension CLLocationCoordinate2D {
@@ -104,4 +112,50 @@ public extension CLLocationCoordinate2D {
 
         return CLLocationCoordinate2D(latitude: lat2 * 180 / Double.pi, longitude: lon2 * 180 / Double.pi)
     }
+}
+
+public extension CLLocationCoordinate2D {
+    public func WorldGS2MarsGS() -> CLLocationCoordinate2D {
+        // a = 6378245.0, 1/f = 298.3
+        // b = a * (1 - f)
+        // ee = (a^2 - b^2) / a^2;
+        let a: Double = 6378245.0;
+        let ee: Double = 0.00669342162296594323;
+        
+        //        return coordinate;
+        /*    if (outOfChina(coordinate.latitude, coordinate.longitude))
+         {
+         
+         }
+         */
+        let wgLat:Double = self.latitude;
+        let wgLon:Double = self.longitude;
+        var dLat:Double = transformLat(wgLon - 105.0, wgLat - 35.0);
+        var dLon:Double = transformLon(wgLon - 105.0, wgLat - 35.0);
+        let radLat:Double = wgLat / 180.0 * Double.pi;
+        var magic:Double = sin(radLat);
+        magic = 1 - ee * magic * magic;
+        let sqrtMagic:Double = sqrt(magic);
+        dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * Double.pi);
+        dLon = (dLon * 180.0) / (a / sqrtMagic * cos(radLat) * Double.pi);
+        
+        return CLLocationCoordinate2DMake(wgLat + dLat, wgLon + dLon);
+    }
+    
+    private func transformLat(_ x: Double, _ y: Double) -> Double {
+        var ret: Double = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * sqrt(abs(x));
+        ret += (20.0 * sin(6.0 * x * Double.pi) + 20.0 * sin(2.0 * x * Double.pi)) * 2.0 / 3.0;
+        ret += (20.0 * sin(y * Double.pi) + 40.0 * sin(y / 3.0 * Double.pi)) * 2.0 / 3.0;
+        ret += (160.0 * sin(y / 12.0 * Double.pi) + 320 * sin(y * Double.pi / 30.0)) * 2.0 / 3.0;
+        return ret;
+    }
+    
+    private func transformLon(_ x: Double, _ y: Double) -> Double {
+        var ret: Double = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * sqrt(abs(x));
+        ret += (20.0 * sin(6.0 * x * Double.pi) + 20.0 * sin(2.0 * x * Double.pi)) * 2.0 / 3.0;
+        ret += (20.0 * sin(x * Double.pi) + 40.0 * sin(x / 3.0 * Double.pi)) * 2.0 / 3.0;
+        ret += (150.0 * sin(x / 12.0 * Double.pi) + 300.0 * sin(x / 30.0 * Double.pi)) * 2.0 / 3.0;
+        return ret;
+    }
+    
 }

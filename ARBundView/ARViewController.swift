@@ -19,6 +19,8 @@ class ARViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         sceneLocView.run()
+        
+        showARLabels()
     }
     
 
@@ -32,4 +34,15 @@ class ARViewController: UIViewController {
     }
     */
 
+    // MARK: - Private functions
+    func showARLabels() {
+        for build in builds[19...19] {
+            let location = CLLocation(coordinate: build.coordinate!, altitude: 0)
+            let image = UIImage(named: "pin")!
+            
+            let annotationNode = LocationAnnotationNode(location: location, image: image)
+            
+            sceneLocView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        }
+    }
 }

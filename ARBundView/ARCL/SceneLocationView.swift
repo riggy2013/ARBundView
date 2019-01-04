@@ -49,7 +49,8 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     ///The method to use for determining locations.
     ///Not advisable to change this as the scene is ongoing.
     public var locationEstimateMethod: LocationEstimateMethod = .mostRelevantEstimate
-
+//    public var locationEstimateMethod: LocationEstimateMethod = .coreLocationDataOnly
+    
     public let locationManager = LocationManager()
     ///When set to true, displays an axes node at the start of the scene
     public var showAxesNode = false
@@ -242,7 +243,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
 
     public func currentLocation() -> CLLocation? {
         if locationEstimateMethod == .coreLocationDataOnly {
-            return locationManager.currentLocation
+            return locationManager.currentLocation?.toMarsGS()
         }
 
         guard let bestEstimate = self.bestLocationEstimate(),
@@ -474,7 +475,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
         if !didFetchInitialLocation {
             //Current frame and current location are required for this to be successful
             if session.currentFrame != nil,
-                let currentLocation = self.locationManager.currentLocation {
+                let currentLocation = self.locationManager.currentLocation?.toMarsGS() {
                 didFetchInitialLocation = true
 
                 self.addSceneLocationEstimate(location: currentLocation)
@@ -516,7 +517,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
 @available(iOS 11.0, *)
 extension SceneLocationView: LocationManagerDelegate {
     func locationManagerDidUpdateLocation(_ locationManager: LocationManager, location: CLLocation) {
-        addSceneLocationEstimate(location: location)
+        addSceneLocationEstimate(location: location.toMarsGS())
     }
 
     func locationManagerDidUpdateHeading(_ locationManager: LocationManager, heading: CLLocationDirection, accuracy: CLLocationAccuracy) {

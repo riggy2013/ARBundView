@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>For CoreLocation</string>
+	<string>For Map Location</string>
 	<key>NSCameraUsageDescription</key>
 	<string>For Augmented Reality</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -10,9 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
         initMapView()
         loadBuildingAnnotations()
+        
+        // testing, show current location
+        initLocManager()
+        
+        mapView.showsUserLocation = true
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -101,14 +108,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //                showAnnotation(build: build)
             }
         }
+        
+        showAnnotation(builds[19])
 }
 
-/*
-    func showAnnotation(build: Building) {
+
+    func showAnnotation(_ build: Building) {
         let address = build.searchAddress!
         
         let initialLocation = CLLocationCoordinate2D(latitude: 31.23799032, longitude: 121.48983657)
-        let region = CLCircularRegion(center: initialLocation, radius: 10000, identifier: "The Bund")
+//        let region = CLCircularRegion(center: initialLocation, radius: 10000, identifier: "The Bund")
 
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(address, /*in: region,*/ completionHandler: { (placemarks, error) in
@@ -129,6 +138,40 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         })
     }
     
+    func initLocManager() {
+        locationManager = CLLocationManager()
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = WorldGS2MarsGS(locValue)
+        annotation.title = "Current Location"
+        self.mapView.addAnnotation(annotation)
+        print(locValue)
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        guard let locValue: CLLocationCoordinate2D = userLocation.location?.coordinate else { return }
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        annotation.title = "MapView Location"
+//        self.mapView.addAnnotation(annotation)
+//        print(locValue)
+    }
+
+
     func WorldGS2MarsGS(_ coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
         // a = 6378245.0, 1/f = 298.3
         // b = a * (1 - f)
@@ -136,7 +179,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let a: Double = 6378245.0;
         let ee: Double = 0.00669342162296594323;
     
-        return coordinate;
+//        return coordinate;
         /*    if (outOfChina(coordinate.latitude, coordinate.longitude))
          {
          
@@ -171,5 +214,5 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         ret += (150.0 * sin(x / 12.0 * Double.pi) + 300.0 * sin(x / 30.0 * Double.pi)) * 2.0 / 3.0;
         return ret;
     }
- */
+ 
 }
