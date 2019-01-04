@@ -105,6 +105,8 @@ open class LocationAnnotationNode: LocationNode {
         
         super.init(location: location)
         
+        self.tag = title
+        self.name = title
         let billboardConstraint = SCNBillboardConstraint()
         billboardConstraint.freeAxes = SCNBillboardAxis.Y
         constraints = [billboardConstraint]

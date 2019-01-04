@@ -121,6 +121,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="sceneLocView" destination="QeX-p3-B1O" id="u1n-7z-zxH"/>
+                        <segue destination="hT5-R6-hXN" kind="show" identifier="arShowDetail" id="dZW-jM-TYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ls3-Ju-lhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,9 +264,9 @@
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zya-ja-NQh"/>
+        <segue reference="m63-jn-3X7"/>
         <segue reference="jHk-XG-Pp2"/>
         <segue reference="20V-0T-eip"/>
-        <segue reference="Zgc-gh-MFI"/>
+        <segue reference="dZW-jM-TYw"/>
     </inferredMetricsTieBreakers>
 </document>
