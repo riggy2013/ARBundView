@@ -24,6 +24,7 @@
 		78122E9821DC96DC00F7AA31 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8E21DC96DC00F7AA31 /* LocationNode.swift */; };
 		78122E9921DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E8F21DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift */; };
 		78122E9B21DC972000F7AA31 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E9A21DC972000F7AA31 /* ARViewController.swift */; };
+		78122E9D21DF3FF400F7AA31 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78122E9C21DF3FF400F7AA31 /* UIImage+Extensions.swift */; };
 		785AA7E121CB8E490091F8E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E021CB8E490091F8E7 /* AppDelegate.swift */; };
 		785AA7E321CB8E490091F8E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785AA7E221CB8E490091F8E7 /* TableViewController.swift */; };
 		785AA7E621CB8E490091F8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785AA7E421CB8E490091F8E7 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		78122E8E21DC96DC00F7AA31 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
 		78122E8F21DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
 		78122E9A21DC972000F7AA31 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		78122E9C21DF3FF400F7AA31 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		785AA7DD21CB8E490091F8E7 /* ARBundView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBundView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785AA7E021CB8E490091F8E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785AA7E221CB8E490091F8E7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				78122E8B21DC96DC00F7AA31 /* CGPoint+Extensions.swift */,
 				78122E8921DC96DC00F7AA31 /* CLLocation+Extensions.swift */,
+				78122E9C21DF3FF400F7AA31 /* UIImage+Extensions.swift */,
 				78122E8C21DC96DC00F7AA31 /* FloatingPoint+Radians.swift */,
 				78122E8621DC96DB00F7AA31 /* LocationManager.swift */,
 				78122E8E21DC96DC00F7AA31 /* LocationNode.swift */,
@@ -273,6 +276,7 @@
 				78122E9821DC96DC00F7AA31 /* LocationNode.swift in Sources */,
 				78122E9B21DC972000F7AA31 /* ARViewController.swift in Sources */,
 				78122E9721DC96DC00F7AA31 /* SCNNode+Extensions.swift in Sources */,
+				78122E9D21DF3FF400F7AA31 /* UIImage+Extensions.swift in Sources */,
 				785AA7E121CB8E490091F8E7 /* AppDelegate.swift in Sources */,
 				78122E9921DC96DC00F7AA31 /* SceneLocationEstimate+Extensions.swift in Sources */,
 			);

@@ -89,6 +89,28 @@ open class LocationAnnotationNode: LocationNode {
 
         addChildNode(annotationNode)
     }
+    
+    public init(location: CLLocation?, title: String) {
+        let label = UILabel(frame: CGRect(x:0, y:0, width: 30, height: CGFloat.greatestFiniteMagnitude))
+        label.text = title
+        label.sizeToFit()
+        self.image = UIImage.imageWithLabel(label)
+        
+        let plane = SCNPlane(width: image.size.width / 100, height: image.size.height / 100)
+        plane.firstMaterial!.diffuse.contents = image
+        plane.firstMaterial!.lightingModel = .constant
+        
+        annotationNode = SCNNode()
+        annotationNode.geometry = plane
+        
+        super.init(location: location)
+        
+        let billboardConstraint = SCNBillboardConstraint()
+        billboardConstraint.freeAxes = SCNBillboardAxis.Y
+        constraints = [billboardConstraint]
+        
+        addChildNode(annotationNode)
+    }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

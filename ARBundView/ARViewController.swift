@@ -38,9 +38,10 @@ class ARViewController: UIViewController {
     func showARLabels() {
         for build in builds[19...19] {
             let location = CLLocation(coordinate: build.coordinate!, altitude: 0)
-            let image = UIImage(named: "pin")!
+//            let image = UIImage(named: "pin")!
             
-            let annotationNode = LocationAnnotationNode(location: location, image: image)
+//            let annotationNode = LocationAnnotationNode(location: location, image: image)
+            let annotationNode = LocationAnnotationNode(location: location, title: build.name)
             
             sceneLocView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         }
