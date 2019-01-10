@@ -268,19 +268,5 @@
 		<key>Longitude</key>
 		<real>121.492273</real>
 	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Minrun Building</string>
-		<key>Photo</key>
-		<string>GSTower</string>
-		<key>URL</key>
-		<string>Gutzlaff_Signal_Tower</string>
-		<key>SearchAddress</key>
-		<string>徐汇区宜山路1388号</string>
-		<key>Latitude</key>
-		<real>31.171022</real>
-		<key>Longitude</key>
-		<real>121.396247</real>
-	</dict>
 </array>
 </plist>

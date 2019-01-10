@@ -93,6 +93,8 @@ open class LocationAnnotationNode: LocationNode {
     public init(location: CLLocation?, title: String) {
         let label = UILabel(frame: CGRect(x:0, y:0, width: 30, height: CGFloat.greatestFiniteMagnitude))
         label.text = title
+        label.textAlignment = NSTextAlignment.center
+        label.backgroundColor = UIColor.gray
         label.sizeToFit()
         self.image = UIImage.imageWithLabel(label)
         

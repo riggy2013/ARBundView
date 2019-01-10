@@ -66,7 +66,7 @@ class ARViewController: UIViewController {
 
     // MARK: - Private functions
     func showARLabels() {
-        for build in builds[19...19] {
+        for build in builds {
             let location = CLLocation(coordinate: build.coordinate!, altitude: 0)
 //            let image = UIImage(named: "pin")!
             
