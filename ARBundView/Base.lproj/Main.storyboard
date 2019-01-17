@@ -31,8 +31,9 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Building Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K9-FK-bOH">
-                                            <rect key="frame" x="98" y="34" width="261" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <rect key="frame" x="98" y="34" width="261" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <viewLayoutGuide key="safeArea" id="3Vi-9a-Uho"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -98,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="TpQ-fl-1lp"/>
                     </view>
                     <navigationItem key="navigationItem" title="The AR" id="acD-0k-SCm">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Sd4-LB-LSA">
+                        <barButtonItem key="leftBarButtonItem" id="Sd4-LB-LSA">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aw1-Rr-xZK">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,9 +265,9 @@
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m63-jn-3X7"/>
-        <segue reference="jHk-XG-Pp2"/>
+        <segue reference="Zya-ja-NQh"/>
+        <segue reference="d8z-b1-7Eq"/>
         <segue reference="20V-0T-eip"/>
-        <segue reference="dZW-jM-TYw"/>
+        <segue reference="M4d-av-yGy"/>
     </inferredMetricsTieBreakers>
 </document>

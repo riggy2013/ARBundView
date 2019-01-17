@@ -91,7 +91,7 @@ class ARViewController: UIViewController {
         
         guard let node = hitResults.first?.node else { return }
         
-        print(node.parent?.name)
+//        print(node.parent?.name)
         performSegue(withIdentifier: "arShowDetail", sender: node.parent)
 
     }

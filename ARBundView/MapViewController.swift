@@ -105,14 +105,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 annotation.title = build.name
                 self.mapView.addAnnotation(annotation)
                 
-//                showAnnotation(build: build)
+//                showAnnotation(build)
             }
         }
         
-        showAnnotation(builds[19])
+//        showAnnotation(builds[19])
 }
 
+    
+    func initLocManager() {
+        locationManager = CLLocationManager()
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+    }
 
+/*
     func showAnnotation(_ build: Building) {
         let address = build.searchAddress!
         
@@ -214,5 +228,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         ret += (150.0 * sin(x / 12.0 * Double.pi) + 300.0 * sin(x / 30.0 * Double.pi)) * 2.0 / 3.0;
         return ret;
     }
+ 
+ */
  
 }
